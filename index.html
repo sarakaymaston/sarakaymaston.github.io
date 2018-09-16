@@ -28,8 +28,12 @@
                 <a href="#Exhibitions">Exhibitions</a>
                 <a href="#Profile">Profile</a>
                 -->
-            </div>        
-            <div id="home-page" class="page grid active"></div>
+            </div>
+            <div id="home-page" class="page grid active"></div>        
+            <script type="text/javascript">
+                var randomSelector = Math.floor((Math.random() * 3) + 1);
+                document.getElementById("home-page").classList += ` background${randomSelector}`;
+            </script>
             <div id="work-page" class="page grid">
                 <div class="project-1">
                     <a href="#project1-1">

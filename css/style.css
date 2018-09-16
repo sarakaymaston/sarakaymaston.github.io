@@ -91,6 +91,18 @@ div#home-page {
     background-size: cover;
 }
 
+#home-page.background1 { 
+    background-image: url("images/home-1.jpg");
+}
+
+#home-page.background2 { 
+    background-image: url("images/home-2.jpg");
+}
+
+#home-page.background3 { 
+    background-image: url("images/home-3.jpg");
+}
+
 /********* WORK *********/
 
 .container.work-page .header-text, .container.work-page .header-text a {
