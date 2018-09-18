@@ -290,6 +290,9 @@ div#contact-page.active {
     position: absolute;
     display: none;
 }
+.contact-menu a {
+    color: #fc4562 !important;
+}
 .container.contact-page .contact-menu {
     display: grid;
     font-size: 24px;
