@@ -6,6 +6,11 @@ $(document).ready(function () {
     //var randomSelector = Math.floor((Math.random() * 3) + 1);
     //document.getElementById("home-page").style.backgroundImage = `url("css/images/home-${randomSelector}.jpg")`;    
     
+    if ($("#home-page")[0].classList.toString().indexOf("background") < 0) {        
+                var randomSelector = Math.floor((Math.random() * 3) + 1);
+                $("#home-page").addClass(`background${randomSelector}`);
+        }
+    
     $(".contact-title").on('click', function () {
         if ($(".contact-title").hasClass('active')) {
             $(".contact-title").removeClass('active')
