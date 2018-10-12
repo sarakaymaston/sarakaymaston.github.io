@@ -127,6 +127,7 @@ div#home-page {
     grid-row: 1;
     grid-column: 1 / span 4;
     grid-row: 1 / span 2;
+    text-align: end;
 }
 #work-page .project-2 {
     grid-row: 1;
@@ -139,10 +140,13 @@ div#home-page {
 #work-page .project-4 {
     grid-row: 3;
     grid-column: 1 / span 4;
+    /* text-align: end; */
+    justify-items: flex-end;
 }
 #work-page .project-5 {
     grid-row: 4 / span 2;
     grid-column: 1 / span 4;
+    text-align: end;
 }
 #work-page .project-6 {
     grid-row: 4;
@@ -155,28 +159,75 @@ div#home-page {
 img.project-image {
     width: 100%;
     height: auto;
+    position: relative;
 }
-.project-3 .project-overlay-title {
-    line-height: 0px;
+.project-overlay-title {
+    height: 100%;
+    align-content: center;
 }
 .project-6 .project-overlay-title {
     line-height: 30px;
 }
 span.project-overlay-title {
     position: absolute;
-    top: calc(50% - 24px);
-    left: 0;
+    /* top: calc(50% - 24px); */
+    /* left: 0; */
     text-align: center;
     width: 100%;
     font-size: 48px;
     color: #ffed66;
     display: none;
+    top: 0;
+    right: 0;
+    border: 0;
+    left: 0;
+    vertical-align: middle;
 }
 #work-page>div:hover .project-overlay-title {
     display: grid;
 }
 #work-page>div:hover img {
     opacity: 0.5;
+}
+
+img.project-image.portrait,
+img.project-image.portrait+.project-overlay-title {
+    max-width: 580px;
+}
+
+img.project-image.box, 
+img.project-image.box+.project-overlay-title {
+    max-width: 430px;
+}
+
+img.project-image.landscape,
+img.project-image.landscape+.project-overlay-title {
+    max-width: 680px;
+}
+
+img.project-image.small,
+img.project-image.small+.project-overlay-title {
+    max-width: 250px;
+}
+
+.right-align a {
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-end;
+    justify-items: flex-end;
+    align-self: flex-end;
+}
+
+.right-align .project-overlay-title {
+    position: absolute;
+    left: auto;
+}
+
+#work-page .project-3 .project-overlay-title {
+    top: -10%;
 }
 
 /********* PROJECTS *********/
@@ -302,3 +353,4 @@ div#contact-page.active {
 .contact-title {
     cursor: pointer;
 }
+
