@@ -37,7 +37,13 @@ $(document).ready(function () {
 function setActivePage(page) {
     $(".page").removeClass('active');
     $(page).addClass('active');
-    $(".container").removeClass().addClass('container').addClass($(page).attr('id'));
+    var pageId = $(page).attr('id');
+    
+    if (pageId.indexOf("project-") >= 0) {
+        pageId = "project-page";
+    }
+    
+    $(".container").removeClass().addClass('container').addClass(pageId);
     if ($(page).attr('id') == "work-page" && fullpage_api) {
         fullpage_api.destroy('all'); 
     }
@@ -77,19 +83,21 @@ function loadProjectPage(hash) {
         return;
     }
     
-    setActivePage($("#project-page"));
+    var projectNumber = hash.replace("#project", "").split('/')[0];
     
-    var projectNumber = hash.replace("#project", "").split('-')[0];
+    setActivePage($(`.project-page.project-${projectNumber}`));    
 
-    new fullpage('#project-page', {
+    new fullpage(`.project-page.project-${projectNumber}`, {
         licenseKey: '23025AB4-5FEE43F6-B44344E4-BDFD5FD5',
+        loopHorizontal: false,
         scrollHorizontally: true,
         scrollHorizontallyKey: 'c2FyYW1hc3Rvbi5jb21fQ2JPYzJOeWIyeHNTRzl5YVhwdmJuUmhiR3g1NGxB',
-        anchors: [ 'project1', 'project2', 'project3', 'project4', 'project5', 'project6', 'project7' ],
-        controlArrows: true
+        //anchors: [ 'project1', 'project2', 'project3', 'project4', 'project5', 'project6', 'project7' ],
+        controlArrows: true,
+        continuousHorizontal: false
     });
     
-    fullpage_api.silentMoveTo(projectNumber, 0);
+    //fullpage_api.silentMoveTo(projectNumber, 0);
 }
 
 $(window).on('hashchange', loadPageFromHash);
