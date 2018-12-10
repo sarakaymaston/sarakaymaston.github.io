@@ -16,11 +16,13 @@ $(document).ready(function () {
             $(".contact-title").removeClass('active')
             $("#contact-page").removeClass('active');
             window.location.hash = $(".page.active").attr('id').split('-')[0]
+            fullpage_api.setAllowScrolling(true);
         }
         else {
             $(".contact-title").addClass('active')
             $("#contact-page").addClass('active');
             window.location.hash = "contact";
+            fullpage_api.setAllowScrolling(false);
         }
     });
     
@@ -36,6 +38,9 @@ function setActivePage(page) {
     $(".page").removeClass('active');
     $(page).addClass('active');
     $(".container").removeClass().addClass('container').addClass($(page).attr('id'));
+    if ($(page).attr('id') == "work-page" && fullpage_api) {
+        fullpage_api.destroy('all'); 
+    }
 }
 
 function loadPageFromHash() {
@@ -81,7 +86,7 @@ function loadProjectPage(hash) {
         scrollHorizontally: true,
         scrollHorizontallyKey: 'c2FyYW1hc3Rvbi5jb21fQ2JPYzJOeWIyeHNTRzl5YVhwdmJuUmhiR3g1NGxB',
         anchors: [ 'project1', 'project2', 'project3', 'project4', 'project5', 'project6', 'project7' ],
-        controlArrows: false
+        controlArrows: true
     });
     
     fullpage_api.silentMoveTo(projectNumber, 0);

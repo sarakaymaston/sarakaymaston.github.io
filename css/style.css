@@ -105,7 +105,8 @@ div#home-page {
 
 /********* WORK *********/
 
-.container.work-page .header-text, .container.work-page .header-text a {
+.container.work-page .header-text, .container.work-page .header-text a,
+.container.project-page .header-text, .container.project-page .header-text a {
     color: #4f4f4f
 }
 
@@ -287,10 +288,6 @@ img.project-image.small+.project-overlay-title {
     font-size: 18px;
     line-height: 25.3px;
     letter-spacing: 1.4px;
-}
-
-.container.project-page #navigation, .container.project-page #header {
-    display: none;
 }
 
 .section-wrapper {
