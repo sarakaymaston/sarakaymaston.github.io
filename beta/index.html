@@ -7,6 +7,7 @@
         <script type="text/javascript" src="scripts/fullpage.scrollHorizontally.min.js"></script>
         <script type="text/javascript" src="scripts/fullpage.extensions.min.js"></script>
         <script type="text/javascript" src="scripts/script.js"></script>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
     </head>
     <body>
         <div class="container home-page">
@@ -26,8 +27,17 @@
                 <a href="#publications">Publications</a>
                 <a href="#exhibitions">Exhibitions</a>
                 <a href="#profile">Profile</a>
+                <a href="#contact" id="mobile-contact-link">Contact</a>
                 <a class="active" href="#home">Home</a>
             </div>
+            <div id="mobile-menu" class="flex flex-vertical header-text">
+                <span class="mobile-menu-title">Sara Maston</span><a href="#work" class="active">Work</a>
+                <a href="#publications" class="">Publications</a>
+                <a href="#exhibitions" class="">Exhibitions</a>
+                <a href="#profile" class="">Profile</a>
+                <a href="#contact" id="mobile-contact-link" class="">Contact</a>
+                <a class="" href="#home">Home</a>
+            <span><b>Contact</b></span><span>Sara Kay Maston</span><a target="_blank" href="mailto:saramaston@gmail.com">saramaston@gmail.com</a><span>514.967.8831</span><a target="_blank" href="https://www.instagram.com/malafax/">instagram</a></div>         
             <div id="home" class="page grid active"></div>        
             <script type="text/javascript">
                 var randomSelector = Math.floor((Math.random() * 3) + 1);
@@ -136,10 +146,12 @@
                 </div>
             </div>
             <div id="profile" class="page grid two-column-text-image">
-                <div class="text-column">
+                <div class="profile-description">                
                     <h3>Artist Profile</h3>
                     <p>Nunc vestibulum suscipit magna, vitae porttitor turpis congue nec. Sed metus libero, blandit ac nulla vel, euismod dapibus risus. Nulla aliquam ut mauris eu vulputate. Vestibulum at posuere elit. Donec a facilisis turpis, sit amet vulputate leo. Aliquam erat volutpat. Phasellus interdum, neque quis consequat blandit, velit sem rhoncus lectus, quis maximus risus augue ac sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur ac tortor aliquet dui vestibulum suscipit ut quis diam. Pellentesque rhoncus tempus convallis.</p>
                     <p>Cras vulputate eros non hendrerit fermentum. Donec viverra nunc vitae turpis tempus, ut dapibus leo luctus. Quisque nec quam tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vitae diam erat. Donec venenatis aliquet felis, sit amet posuere tellus venenatis quis. Phasellus pellentesque ac massa id hendrerit.</p>
+                </div>
+                <div class="text-column profile-timeline">
                     <h3>Education</h3>
                     <h4>2018</h4>
                     <p><i>Master of Fine Arts,</i> York University</p>
@@ -191,7 +203,7 @@
                     <h4>2008</h4>
                     <p>Studio Monitor, Department of Print Media, Concordia University, Montreal</p>
                 </div>
-                <div class="image-column">
+                <div class="image-column profile-image">
                     <img src="css/images/profile.jpg" height="600px" width="auto">
                 </div>
             </div>

@@ -1,3 +1,4 @@
+var fullpage_api; 
 $(document).ready(function () {
    // alert("test");
     
@@ -31,6 +32,19 @@ $(document).ready(function () {
         fullpage_api.destroy('all'); 
     });
     
+    $("#navigation").on("click", "a", function (e) {
+        $("#navigation").addClass('nohover');
+        window.scrollTo(0,0);
+        setTimeout(() => { $("#navigation").removeClass('nohover'); }, 100);
+    });
+    
+    
+    $("#mobile-menu").on("click", "a", function (e) {
+        $("#mobile-menu").addClass('nohover');
+        window.scrollTo(0,0);
+        setTimeout(() => { $("#mobile-menu").removeClass('nohover'); }, 100);
+    });
+    
     loadPageFromHash();
 });
 
@@ -49,7 +63,7 @@ function setActivePage(page) {
     
     
     $(".container").removeClass().addClass('container').addClass(`${pageId}-page`);
-    if ($(page).attr('id') == "work" && fullpage_api) {
+    if ($(page).attr('id') == "work" && fullpage_api !== undefined) {
         fullpage_api.destroy('all'); 
     }
 }
@@ -93,6 +107,7 @@ function loadPageFromHash() {
             $("#contact-page").addClass('active');
             break;
     }
+        window.scrollTo(0,0);
 }
 
 function loadProjectPage(hash) {  
