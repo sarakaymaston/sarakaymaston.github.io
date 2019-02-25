@@ -32,17 +32,27 @@ $(document).ready(function () {
         fullpage_api.destroy('all'); 
     });
     
-    $("#navigation").on("click", "a", function (e) {
+    $("#mobile-menu").on("click", )
+    
+    $("#navigation").on("mouseover", function() {
+        $("#navigation").removeClass('nohover');
+    });
+    
+    $("#navigation").on("click", "a:not(.active)", function (e) {
         $("#navigation").addClass('nohover');
         window.scrollTo(0,0);
-        setTimeout(() => { $("#navigation").removeClass('nohover'); }, 100);
+        //setTimeout(() => { $("#navigation").removeClass('nohover'); }, 100);
     });
     
     
-    $("#mobile-menu").on("click", "a", function (e) {
+    $("#mobile-menu").on("mouseover", function() {
+        $("#mobile-menu").removeClass('nohover');
+    });
+    
+    $("#mobile-menu").on("click", "a:not(.active)", function (e) {
         $("#mobile-menu").addClass('nohover');
         window.scrollTo(0,0);
-        setTimeout(() => { $("#mobile-menu").removeClass('nohover'); }, 100);
+        //setTimeout(() => { $("#mobile-menu").removeClass('nohover'); }, 100);
     });
     
     loadPageFromHash();
@@ -58,7 +68,9 @@ function setActivePage(page) {
     }
     else {
         $("#navigation a").removeClass();
+        $("#mobile-menu a").removeClass();
         $(`#navigation a[href='#${pageId}']`).addClass('active');
+        $(`#mobile-menu a[href='#${pageId}']`).addClass('active');
     }
     
     
