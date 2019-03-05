@@ -711,4 +711,16 @@ span, div, i, b {
 .project-page>div {
     grid-column: 2;
 }
+    span.exit-project-arrow {
+    width: 50px !important;
+    height: 50px !important;
+    top: calc(50% - 15px);
+}
+
+img.project-image {
+    width: auto;
+}
+    div#work img {
+    max-width: calc(100% - 20px);
+}
 }
