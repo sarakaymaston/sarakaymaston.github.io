@@ -45,12 +45,23 @@ $(document).ready(function () {
     });
     
     
-    $("#mobile-menu").on("mouseover", function() {
-        $("#mobile-menu").removeClass('nohover');
+    
+    $("#mobile-menu").on("click", "a", function (e) {
+        $("#mobile-menu").addClass('nohover');
+        $("#mobile-menu").removeClass('open-menu');
+        window.scrollTo(0,0);
+        //setTimeout(() => { $("#mobile-menu").removeClass('nohover'); }, 100);
     });
     
-    $("#mobile-menu").on("click", "a:not(.active)", function (e) {
-        $("#mobile-menu").addClass('nohover');
+    $("#mobile-menu").on("click", "h1", function (e) {
+        if ( $("#mobile-menu").hasClass('open-menu')) {
+            $("#mobile-menu").removeClass('open-menu');
+            $("#mobile-menu").addClass('nohover');
+            return;
+        }
+        
+        $("#mobile-menu").addClass('open-menu');
+        $("#mobile-menu").removeClass('nohover');
         window.scrollTo(0,0);
         //setTimeout(() => { $("#mobile-menu").removeClass('nohover'); }, 100);
     });

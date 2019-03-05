@@ -160,7 +160,7 @@ div#home {
 #work .project-1 {
     grid-row: 1;
     grid-column: 1 / span 4;
-    grid-row: 2 / span 2;
+    grid-row: 2 / span 3;
     text-align: end;
 }
 #work .project-2 {
@@ -168,26 +168,26 @@ div#home {
     grid-column: 5 / span 4;
 }
 #work .project-3 {
-    grid-row: 3 / span 2;
+    grid-row: 3 / span 3;
     grid-column: 5 / span 4;
 }
 #work .project-4 {
-    grid-row: 4;
+    grid-row: 5 / span 2;
     grid-column: 1 / span 4;
     /* text-align: end; */
     justify-items: flex-end;
 }
 #work .project-5 {
-    grid-row: 5 / span 2;
+    grid-row: 7 / span 2;
     grid-column: 1 / span 4;
     text-align: end;
 }
 #work .project-6 {
-    grid-row: 6;
+    grid-row: 7;
     grid-column: 5 / span 4;
 }
 #work .project-7 {
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 5 / span 4;
 }
 img.project-image {
@@ -268,8 +268,10 @@ img.project-image.small+.project-overlay-title {
 /********* PROJECTS *********/
 
 .project-page {
-    //grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 80px auto 80px;
+    //
+    grid-template-columns: repeat(2, 50%);
+    /* grid-template-columns: 10px auto 10px; */
+    grid-template-columns:;
 }
 .project-item-counter {
     position: absolute;
@@ -311,6 +313,7 @@ img.project-image.small+.project-overlay-title {
     grid-row: 2;
     max-height: calc(100% - 40px);
     max-width: 100%;
+    width: calc(100% - 20px);
     align-self: center;
     justify-self: center;
 }
@@ -444,10 +447,10 @@ div#contact-page.active {
 }
 @media (max-width: 800px) {
     h1, h2, h3, h4, h5, p {
-        font-size: 1.5em;
+        font-size: 1em;
     }
     #header,#navigation {
-        font-size: 1.5em;
+        font-size: 1em;
         display: none;
     }    
     #mobile-contact-link {
@@ -484,8 +487,9 @@ div#contact-page.active {
     }
 
     .item-description {
-        font-size: 1.5em !important;
         text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .project-item-counter {
         bottom: 10px;
@@ -561,7 +565,7 @@ div#contact-page.active {
     background-size: contain;
     background-repeat: no-repeat;
 }
-#navigation:hover:not(.nohover)>a.active::before {
+.container:not(.home-page) #navigation:hover:not(.nohover)>a.active::before {
     background: url('images/open-menu-peanut.svg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -608,7 +612,7 @@ div#mobile-menu>* {
 }
 
 div#mobile-menu .mobile-menu-title, div#mobile-menu:not(.nohover):hover>* {
-    display: grid;
+    display: block;
     cursor: pointer;
     margin: 5px 0px;
 }
@@ -636,26 +640,26 @@ div#mobile-menu span:nth-child(8) {
     top: 0;
     left: 0;
 }
-.home-page span.mobile-menu-title::before {
+.home-page h1.mobile-menu-title::before {
     background: url('images/closed-menu-peanut-yellow.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    position: fixed;
-    width: 52px;
-    height: 50px;
-    top: 40px;
-    left: calc(50% - 180px);
+    /* position: relative; */
+    /* width: 38px; */
+    /* height: 37px; */
+    /* top: 40px; */
+    /* left: calc(50% - 180px); */
 }
-span.mobile-menu-title::before {
+h1.mobile-menu-title::before {
     content: '';
     background: url('images/closed-menu-peanut.svg');
     background-size: contain;
     background-repeat: no-repeat;
     position: fixed;
-    width: 52px;
-    height: 50px;
-    top: 40px;
-    left: calc(50% - 180px);
+    width: 42px;
+    height: 58px;
+    top: 12px;
+    left: calc(50% - 150px);
 }
 #mobile-menu:not(.nohover):hover span.mobile-menu-title::before {
     background: url('images/open-menu-peanut.svg');
@@ -671,4 +675,40 @@ span.mobile-menu-title::before {
 }
 div#mobile-menu:not(.nohover):hover>* {
     color: black;
+}
+.image-column {
+    display: grid;
+    grid-row-gap: 20px;
+    /* max-width: 50%; */
+}
+@media (max-width: 800px) {
+    h1 {
+        font-size: 1em;
+    }
+
+#mobile-menu:not(.nohover) h1.mobile-menu-title::before {
+    background: url(images/open-menu-peanut.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 26px;
+    height: 58px;
+    top: 10px;
+    left: calc(50% - 130px);
+}
+.image-column img {
+    max-width: 100%;
+    height: auto;
+}
+span, div, i, b {
+    font-size: 1em;
+}
+.fp-controlArrow {
+    width: 50px !important;
+    height: 50px !important;
+    margin-top: -14px !important;
+}
+.project-page>div {
+    grid-column: 2;
+}
 }
