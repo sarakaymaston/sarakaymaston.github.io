@@ -292,7 +292,7 @@ img.project-image.small+.project-overlay-title {
 .slide.project-item>div {
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 102px auto 80px;
+    grid-template-rows: 100px auto 100px;
     position: relative;
 }
 .slide.project-item>div>* {
@@ -312,8 +312,8 @@ img.project-image.small+.project-overlay-title {
 .item-image {
     grid-row: 2;
     max-height: calc(100% - 40px);
-    max-width: 100%;
-    width: calc(100% - 20px);
+    max-width: calc(100% - 40px);
+    width: auto;
     align-self: center;
     justify-self: center;
 }
@@ -362,7 +362,7 @@ span.exit-project-arrow {
     content: '';
     position: absolute;
     top: calc(50% - 38px);
-    right: 0;
+    right: 14px;
     height: 90px;
     width: 90px;
     background: url('images/arrow.svg');
@@ -475,8 +475,8 @@ div#contact-page.active {
         flex-direction:column;
         justify-items:center;
     }
-    #work.grid>.project-1 { 
-        margin-top:160px;
+    #work.grid>.project-1 {
+        margin-top: 55px;
     }
     #work.grid img {        
         margin: 0 auto;
@@ -514,7 +514,7 @@ div#contact-page.active {
 }
 .profile-description, .text-column {
     grid-row: 1;
-    margin-top: 160px;
+    margin-top: 60px;
 }
 .profile-timeline {
     grid-row: 3;
@@ -614,7 +614,7 @@ div#mobile-menu>* {
 div#mobile-menu .mobile-menu-title, div#mobile-menu:not(.nohover):hover>* {
     display: block;
     cursor: pointer;
-    margin: 5px 0px;
+    margin: 10px 0px;
 }
 div#mobile-menu:not(.nohover):hover {
     height: 100%;
@@ -625,7 +625,7 @@ span.mobile-menu-title {
     margin-top: 30px !important;
 }
 div#mobile-menu a:nth-child(2) {
-    margin-top: 70px !important;
+    margin-top: 40px !important;
 }
 div#mobile-menu span:nth-child(8) {
     margin-top: 70px !important;
@@ -658,7 +658,7 @@ h1.mobile-menu-title::before {
     position: fixed;
     width: 42px;
     height: 58px;
-    top: 12px;
+    top: 22px;
     left: calc(50% - 150px);
 }
 #mobile-menu:not(.nohover):hover span.mobile-menu-title::before {
@@ -691,10 +691,10 @@ div#mobile-menu:not(.nohover):hover>* {
     background-size: contain;
     background-repeat: no-repeat;
     position: fixed;
-    width: 26px;
+    width: 35px;
     height: 58px;
-    top: 10px;
-    left: calc(50% - 130px);
+    top: 16px;
+    left: calc(50% - 144px);
 }
 .image-column img {
     max-width: 100%;
@@ -714,7 +714,7 @@ span, div, i, b {
     span.exit-project-arrow {
     width: 50px !important;
     height: 50px !important;
-    top: calc(50% - 15px);
+    top: calc(50% - 25px);
 }
 
 img.project-image {
@@ -722,5 +722,16 @@ img.project-image {
 }
     div#work img {
     max-width: calc(100% - 20px);
+}
+
+div#mobile-menu>span, .contact-link {
+    text-decoration: underline;
+}
+
+span.mobile-menu-contact-header {
+    font-weight: bold;
+}
+div#mobile-menu .mobile-menu-title {
+    margin: 15px 0 !important;
 }
 }
