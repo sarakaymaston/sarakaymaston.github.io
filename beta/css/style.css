@@ -292,7 +292,7 @@ img.project-image.small+.project-overlay-title {
 .slide.project-item>div {
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 100px auto 100px;
+    grid-template-rows: 100px auto 100px 30px;
     position: relative;
 }
 .slide.project-item>div>* {
@@ -492,8 +492,11 @@ div#contact-page.active {
         margin-right: 10px;
     }
     .project-item-counter {
-        bottom: 10px;
+        bottom: 0px;
         right: 10px;
+        position: relative;
+        grid-row: 4;
+        text-align: right;
     }
 }
 @media (max-width: 1280px) {
@@ -605,6 +608,9 @@ div#mobile-menu {
     font-size: 24px;
     text-align: center;
     }
+    div#mobile-menu>*:not(h1) {
+        font-size: 20px;
+    }
 }
 
 div#mobile-menu>* {
@@ -614,7 +620,7 @@ div#mobile-menu>* {
 div#mobile-menu .mobile-menu-title, div#mobile-menu:not(.nohover):hover>* {
     display: block;
     cursor: pointer;
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
 div#mobile-menu:not(.nohover):hover {
     height: 100%;
@@ -697,7 +703,7 @@ div#mobile-menu:not(.nohover):hover>* {
     left: calc(50% - 144px);
 }
 .image-column img {
-    max-width: 100%;
+    max-width: calc(100% - 0px) !important;
     height: auto;
 }
 span, div, i, b {
@@ -724,14 +730,42 @@ img.project-image {
     max-width: calc(100% - 20px);
 }
 
-div#mobile-menu>span, .contact-link {
-    text-decoration: underline;
-}
-
 span.mobile-menu-contact-header {
     font-weight: bold;
 }
 div#mobile-menu .mobile-menu-title {
     margin: 15px 0 !important;
 }
+#mobile-menu>a:last-child, #mobile-menu>a:nth-child(10) {
+    text-decoration: underline;
+}
+}
+
+@media (max-width: 800px) {
+    #mobile-menu>*, .home-page .header-text * {
+     color:  #4f4f4f !important;
+    }
+
+     .home-page #mobile-menu:not(.open-menu) .mobile-menu-title {
+         color: #ffed66 !important;
+     }
+}
+@media (max-width: 350px) {
+    #mobile-menu {
+        font-size: 16px !important;
+    }
+    #mobile-menu:not(.nohover) h1.mobile-menu-title::before {
+        left: calc(50% - 116px);
+        width: 30px;
+        top: 12px;
+    }
+    h1.mobile-menu-title::before{
+        left: calc(50% - 124px);
+        top: 17px;
+        width: 40px;
+    }
+}
+div#exhibitions .image-column img {
+    max-width: 525px;
+    height: auto;
 }
