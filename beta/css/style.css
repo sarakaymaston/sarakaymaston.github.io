@@ -552,7 +552,7 @@ div#contact-page.active {
     grid-column: 2;
 }
 .profile-timeline {
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 2;
     margin-top: 0px;
 }
