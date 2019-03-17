@@ -224,6 +224,11 @@ span.project-overlay-title {
     opacity: 0.5;
 }
 @media (min-width: 800px) {
+div#publications .image-column img {
+    max-width: 600px;
+    height: auto;
+}
+    
 img.project-image.portrait,
 img.project-image.portrait+.project-overlay-title {
     max-width: 580px;
@@ -600,6 +605,9 @@ div#mobile-menu {
     display: none;
 }
 @media (max-width: 800px) {
+    div#profile .image-column img {
+    margin-top: 40px;
+}
     div#mobile-menu {
     display: flex;
     position: fixed;
@@ -685,7 +693,7 @@ div#mobile-menu:not(.nohover):hover>* {
 .image-column {
     display: grid;
     grid-row-gap: 20px;
-    /* max-width: 50%; */
+    margin-bottom: 20px;
 }
 @media (max-width: 800px) {
     h1 {

@@ -130,7 +130,11 @@ function loadPageFromHash() {
             $("#contact-page").addClass('active');
             break;
     }
-        window.scrollTo(0,0);
+    
+    if (hash == "#work" && window.innerWidth <= 800) {
+        return;
+    }
+    window.scrollTo(0,0);
 }
 
 function loadProjectPage(hash) {  
