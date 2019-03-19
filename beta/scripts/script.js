@@ -146,6 +146,22 @@ function loadProjectPage(hash) {
     
     setActivePage($(`.project-page.project-${projectNumber}`));    
 
+    
+    if (window.innerWidth <= 800) 
+        {
+            new fullpage(`.project-page.project-${projectNumber}`, {
+                licenseKey: '23025AB4-5FEE43F6-B44344E4-BDFD5FD5',
+                loopHorizontal: false,
+                scrollHorizontally: true,
+                scrollHorizontallyKey: 'c2FyYW1hc3Rvbi5jb21fQ2JPYzJOeWIyeHNTRzl5YVhwdmJuUmhiR3g1NGxB',
+                anchors: [ `project${projectNumber}` ],
+                controlArrows: false,
+                continuousHorizontal: false,
+                autoScrolling: false
+            });
+        }
+    else {
+        
     new fullpage(`.project-page.project-${projectNumber}`, {
         licenseKey: '23025AB4-5FEE43F6-B44344E4-BDFD5FD5',
         loopHorizontal: false,
@@ -155,6 +171,7 @@ function loadProjectPage(hash) {
         controlArrows: true,
         continuousHorizontal: false
     });
+    }
     
     //fullpage_api.silentMoveTo(projectNumber, 0);
 }
