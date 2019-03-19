@@ -147,7 +147,7 @@ function loadProjectPage(hash) {
     setActivePage($(`.project-page.project-${projectNumber}`));    
 
     
-    if (window.innerWidth <= 800) 
+    if (screen.width <= 800) 
         {
             new fullpage(`.project-page.project-${projectNumber}`, {
                 licenseKey: '23025AB4-5FEE43F6-B44344E4-BDFD5FD5',
