@@ -30,6 +30,7 @@ $(document).ready(function () {
     $(".project-page").on('click', ".exit-project-arrow", function () {
         window.location.hash = "work";
         fullpage_api.destroy('all'); 
+        $(".project-page").removeClass("fullpage-wrapper fp-destroyed");
     });
     
     $("#mobile-menu").on("click", )
@@ -88,6 +89,7 @@ function setActivePage(page) {
     $(".container").removeClass().addClass('container').addClass(`${pageId}-page`);
     if ($(page).attr('id') == "work" && fullpage_api !== undefined) {
         fullpage_api.destroy('all'); 
+        $(".project-page").removeClass("fullpage-wrapper fp-destroyed");
     }
 }
 
