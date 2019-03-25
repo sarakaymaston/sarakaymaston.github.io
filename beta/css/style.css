@@ -495,9 +495,11 @@ div#contact-page.active {
         margin-right: 50px;
         font-size: 14px;
         align-self: end;
+        margin-left: 10px;
+        margin-bottom: 10px;
     }
     .project-item-counter {
-        bottom: 4px;
+        bottom: 14px;
         right: 10px;
         position: absolute;
         text-align: right;
