@@ -33,6 +33,18 @@ $(document).ready(function () {
         $(".project-page").removeClass("fullpage-wrapper fp-destroyed");
     });
     
+    $(".close-project-mobile").on('click', function () {
+        window.location.hash = "work";
+        fullpage_api.destroy('all'); 
+        $(".project-page").removeClass("fullpage-wrapper fp-destroyed");
+    });
+    
+    $(".item-image").on('click', function () {
+        if (window.screen.width <= 800) {
+            fullpage_api.moveSlideRight();
+        }
+    });
+    
     $("#mobile-menu").on("click", )
     
     $("#navigation").on("mouseover", function() {

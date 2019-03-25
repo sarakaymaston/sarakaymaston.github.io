@@ -492,16 +492,16 @@ div#contact-page.active {
     }
 
     .item-description {
-        text-align: center;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-right: 50px;
+        font-size: 14px;
+        align-self: end;
     }
     .project-item-counter {
-        bottom: 0px;
+        bottom: 4px;
         right: 10px;
-        position: relative;
-        grid-row: 4;
+        position: absolute;
         text-align: right;
+        font-size: 14px;
     }
 }
 @media (max-width: 1280px) {
@@ -607,6 +607,9 @@ div#mobile-menu {
 @media (max-width: 800px) {
     div#profile .image-column img {
     margin-top: 40px;
+}
+.project div#mobile-menu, .project-page div#mobile-menu {
+    display: none;
 }
     div#mobile-menu {
     display: flex;
@@ -757,6 +760,31 @@ div#mobile-menu .mobile-menu-title {
      .home-page #mobile-menu:not(.open-menu) .mobile-menu-title {
          color: #ffed66 !important;
      }
+    .container.project-page #mobile-menu {
+    display: none;
+}
+
+.close-project-mobile {
+    background: url('images/close-01.svg');
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 10px;
+    position: fixed;
+    top: 10px;
+    z-index: 10000;
+}
+    .item-image {
+        grid-row: 1 / span 2;
+    }
+
+.slide.project-item>div {
+    grid-template-rows: 100px auto 80px;
+}
+.fp-controlArrow, .exit-project-arrow {
+    display: none !important;
+}
 }
 @media (max-width: 350px) {
     #mobile-menu {
