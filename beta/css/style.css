@@ -766,7 +766,7 @@ div#mobile-menu .mobile-menu-title {
     display: none;
 }
 
-.close-project-mobile {
+.project-page .close-project-mobile, .project .close-project-mobile {
     background: url('images/close-01.svg');
     width: 15px;
     height: 15px;
