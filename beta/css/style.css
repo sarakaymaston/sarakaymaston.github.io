@@ -772,9 +772,9 @@ div#mobile-menu .mobile-menu-title {
     height: 15px;
     background-size: contain;
     background-repeat: no-repeat;
-    right: 10px;
+    right: 20px;
     position: fixed;
-    top: 10px;
+    top: 20px;
     z-index: 10000;
 }
     .item-image {
