@@ -93,14 +93,12 @@ function setActivePage(page) {
         $("#mobile-menu a").removeClass();
         $(`#navigation a[href='#${pageId}']`).addClass('active');
         $(`#mobile-menu a[href='#${pageId}']`).addClass('active');
+        fullpage_api.destroy('all'); 
+        $(".project-page").removeClass("fullpage-wrapper fp-destroyed");
     }
     
     
     $(".container").removeClass().addClass('container').addClass(`${pageId}-page`);
-    if ($(page).attr('id') == "work" && fullpage_api !== undefined) {
-        fullpage_api.destroy('all'); 
-        $(".project-page").removeClass("fullpage-wrapper fp-destroyed");
-    }
 }
 
 function loadPageFromHash() {
