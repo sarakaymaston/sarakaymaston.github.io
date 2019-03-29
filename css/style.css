@@ -324,7 +324,7 @@ img.project-image.small+.project-overlay-title {
 }
 
 .item-description {
-    grid-row: 4;
+    grid-row: 3;
     justify-self: center;
     font-size: 18px;
     line-height: 25.3px;
@@ -798,6 +798,9 @@ div#mobile-menu .mobile-menu-title {
 }
 .section.fp-section.active {
     height: auto !important;
+}
+.item-description {
+    grid-row: 4;
 }
 }
 @media (max-width: 350px) {
