@@ -7,9 +7,10 @@
         <script type="text/javascript" src="scripts/fullpage.scrollHorizontally.min.js"></script>
         <script type="text/javascript" src="scripts/fullpage.extensions.min.js"></script>
         <script type="text/javascript" src="scripts/script.js"></script>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
     </head>
     <body>
-        <div class="container">
+        <div class="container home-page">
             <div id="header" class="header-text">
                 <span class="header-title">Sara Maston</span>
                 <div class="contact-title">
@@ -23,65 +24,213 @@
             </div>
             <div id="navigation" class="flex flex-vertical header-text">
                 <a href="#work">Work</a>
-                <!--
-                <a href="#Publications">Publications</a>
-                <a href="#Exhibitions">Exhibitions</a>
-                <a href="#Profile">Profile</a>
-                -->
+                <a href="#publications">Publications</a>
+                <a href="#exhibitions">Exhibitions</a>
+                <a href="#profile">Profile</a>
+                <a href="#contact" id="mobile-contact-link">Contact</a>
+                <a class="active" href="#home">Home</a>
             </div>
-            <div id="home-page" class="page grid active"></div>        
+            <div id="mobile-menu" class="flex flex-vertical header-text nohover">
+                <h1 class="mobile-menu-title">Sara Maston</h1>
+                <a href="#work" class="active">Work</a>
+                <a href="#publications" class="">Publications</a>
+                <a href="#exhibitions" class="">Exhibitions</a>
+                <a href="#profile" class="">Profile</a>
+                <a href="#contact" id="mobile-contact-link" class="">Contact</a>
+                <a class="" href="#home">Home</a>
+                <span class="mobile-menu-contact-header">Contact</span>
+                <span>Sara Kay Maston</span>
+                <a target="_blank" href="mailto:saramaston@gmail.com" class="contact-link">saramaston@gmail.com</a>
+                <a target="_blank" href="https://www.instagram.com/malafax/" class="contact-link">instagram</a>
+            </div>         
+            <div id="home" class="page grid active"></div>        
             <script type="text/javascript">
                 var randomSelector = Math.floor((Math.random() * 3) + 1);
-                document.getElementById("home-page").classList += ` background${randomSelector}`;
+                document.getElementById("home").classList += ` background${randomSelector}`;
             </script>
-            <div id="work-page" class="page grid">
+            <div id="work" class="page grid">
                 <div class="project-1 right-align">
-                    <a href="#project1/1">
+                    <a href="#project1">
                         <img class="project-image portrait" alt="Eyes that see in the dark" src="css/images/projects/01/01_Project_Main.jpg">
                         <span class="project-overlay-title">Eyes that see in the dark</span>
                     </a>
                 </div>
                 <div class="project-2">
-                    <a href="#project2/1">
+                    <a href="#project2">
                         <img class="project-image box" alt="Afterlife" src="css/images/projects/02/02_Project_Main.jpg">
                         <span class="project-overlay-title">Afterlife</span>
                     </a>
                 </div>
                 <div class="project-3">
-                    <a href="#project3/1">
+                    <a href="#project3">
                         <img class="project-image portrait" alt="Mother" src="css/images/projects/03/03_Project_Main.jpg">
                         <span class="project-overlay-title">Mother</span>
                     </a>
                 </div>
                 <div class="project-4 right-align">
-                    <a href="#project4/1">
+                    <a href="#project4">
                         <img class="project-image portrait" alt="Crow" src="css/images/projects/04/04_Project_Main.jpg">
                         <span class="project-overlay-title">Crow</span>
                     </a>
                 </div>
                 <div class="project-5 right-align">
-                    <a href="#project5/1">
+                    <a href="#project5">
                         <img class="project-image box" alt="Private Life of Arthropod" src="css/images/projects/05/05_Project_MAIN.jpg">
                         <span class="project-overlay-title">Private Life of Arthropod</span>
                     </a>
                 </div>
                 <div class="project-6">
-                    <a href="#project6/1">
+                    <a href="#project6">
                         <img class="project-image portrait" alt="Life Within Life" src="css/images/projects/06/06_Project_Main.jpg">
                         <span class="project-overlay-title">Life Within Life</span>
                     </a>
                 </div>
                 <div class="project-7">
-                    <a href="#project7/1">
+                    <a href="#project7">
                         <img class="project-image small" alt="Lotus Vessel" src="css/images/projects/07/07_Project_Main.jpg">
                         <span class="project-overlay-title">Lotus Vessel</span>
                     </a>
                 </div>
             </div>
-            <div id="publications-page" class="page grid"></div>
-            <div id="exhibitions-page" class="page grid"></div>
-            <div id="contact-page" class="overlay-page">
-            </div>   
+            <div id="publications" class="page grid two-column-text-image">
+                <div class="text-column">
+                    <h3>Catalogues + Books</h3>
+                    <h4>2018</h4>
+                    <p><i>Mother,</i> LooseLeaf Magazine, Amanda Low, Volume 6</p>
+                    <p><i>All-girl pop band XVK start tour in Cambridge,</i> Bill Doucet, Cambridge Times</p>
+                    <p><i>Roundtable Yearbook,</i> Morris Fox, Dragon Academy Roundtable Residency</p>
+                    <p><i>Fertile Window,</i> York University 2018 MFA cohort, Art Metropole</p>
+                    <h4>2017</h4>
+                    <p><i>Fresh Paint/New Construction,</i> Michael Patten, Art Mur</p>
+                    <h4>2016</h4>
+                    <p><i>Analogy of The Thing Upon Which you Currently Gaze,</i> Letticia Cosbert, YTB Gallery</p>
+                    <h4>2013</h4>
+                    <p><i>Combine,</i> Jennifer Rassi, overseen by Dr. Anna Waclawek, FOFA Gallery</p>
+                </div>
+                <div class="image-column">
+                    <img src="css/images/publications/pub-masto_fertile.jpg" height="600px" width="auto">
+                    <p><i>Fertile Window,</i> York University 2018 MFA cohort, Art Metropole</p>
+                    <img src="css/images/publications/pub-masto_cambridge001-1-2.jpg" height="600px" width="auto">
+                    <p><i>All-girl pop band XVK start tour in Cambridge,</i> Bill Doucet, Cambridge Times</p>
+                    <img src="css/images/publications/pub-xvk-cambridge.jpg" height="600px" width="auto">
+                    <p><i>All-girl pop band XVK start tour in Cambridge,</i> Bill Doucet, Cambridge Times</p>
+                    <img src="css/images/publications/pub-YTB.jpg" height="600px" width="auto">
+                    <p><i>Fresh Paint/New Construction,</i> Michael Patten, Art Mur</p>
+                    <img src="css/images/publications/pub-Letticia.jpg" height="600px" width="auto">
+                    <p><i>Analogy of The Thing Upon Which you Currently Gaze,</i> Letticia Cosbert, YTB Gallery</p>
+                    <img src="css/images/publications/pub-combine.jpg" height="600px" width="auto">
+                    <p><i>Combine,</i> Jennifer Rassi, overseen by Dr. Anna Waclawek, FOFA Gallery</p>
+                </div>
+            </div>
+            <div id="exhibitions" class="page grid two-column-text-image">
+                <div class="text-column">
+                    <h3>Exhibitions</h3>
+                    <h4>2018</h4>
+                    <p><i>╰(*8:8:8*)╯♡ “Triple Happiness”,</i> Idea | Exchange, curated by Žana Kozomora, Cambridge</p>
+                    <p><i>An Observable Collapse Towards Another,</i> Xpace Cultural Centre, curated by Rowan Lynch, Toronto</p>
+                    <p><i>Long Winter,</i> Tranzac Club, curated by Dorica Manuel & Tiffany Schofield, Toronto</p>
+                    <p><i>An Animal Among Animals,</i> Special Projects Gallery York University, Toronto</p>
+                    <p><i>真实的人生 Life Of The True,</i> Martin Goya Business, curated by Cheng Ran, Hangzhou</p>
+                    <p><i>Encountering of Picture Plans,</i> Allison Milne, curated by Michel Daignault, Toronto</p>
+                    <h4>2017</h4>
+                    <p><i>Fresh Paint/New Construction,</i> curated by Michael Patten, Art Mur, Montreal</p>
+                    <p><i>Y+XVK,</i> curated by Tiffany Schofield, Y+ Contemporary, Toronto</p>
+                    <p><i>XVK On Big,</i> curated by Audrey D'Astous, Jouez Participatory/Performance Art Projects, Toronto</p>
+                    <p><i>༜༜༜cutecuteride8,</i> Special Projects Gallery, York University, Toronto</p>
+                    <h4>2016</h4>
+                    <p><i>Fresh Constructions,</i> curated by Marjan Verstappen and Humboldt Magnussen, Katzman Contemporary in collaboration with YTB Gallery, Toronto</p>
+                    <h4>2015</h4>
+                    <p><i>Screen,</i> curated by Daniel Paterson, Charlotte Hale Gallery, Toronto</p>
+                    <h4>2014</h4>
+                    <p><i>30 Under 30,</i> curated by Jane Corkin, Gardiner Museum, Toronto</p>
+                    <p><i>Dialogue,</i> curated by Morris Fox, Dragon Academy, Toronto</p>
+                    <h4>2013</h4>
+                    <p><i>Combine,</i> curated by Jake Moore, Fofa Gallery, Montreal</p>
+                    <p><i>Fine Arts Graduating Students Exhibition,</i> Curated by Tricia Middleton, VAV Gallery, Montreal</p>
+                    <h4>2012</h4>
+                    <p><i>High Rollers,</i> curated by Évlyne Laurin, Studio Beluga, Montreal, Quebec</p>
+                    <h4>2011</h4>
+                    <p><i>Am I Still in the Power of the Demon?,</i> curated by Courtenay Mayes and Emma Siemens-Adolphe, VAV Gallery, Montreal, Quebec</p>
+                    <p><i>In Success We Find Failure/In Failure We Find Success,</i> curated by Sadaf Hakimian Nava and Julie Johnston, Redbird Gallery, Montreal, Quebec</p>
+                    <p><i>Material Flux,</i> curated by Tracey Briscoe, Galerie Rye, Montreal</p>
+                    <h4>2010</h4>
+                    <p><i>Drawing the Line in Painting,</i> curated by Emma Warburton, Art Matters Festival, Montreal</p>
+                    <p><i>The Box Project,</i> curated by Chloe Beaulac, ARPRIM, Montreal</p>
+                </div>
+                <div class="image-column">
+                    <img src="css/images/exhibitions/mother-detail-1.jpg" height="600px" width="auto">
+                    <img src="css/images/exhibitions/eyes-that-see-(detail).jpg" height="600px" width="auto">
+                    <img src="css/images/exhibitions/eyes-that-see-in-the-dark_xpace.jpg" height="600px" width="auto">
+                    <img src="css/images/exhibitions/Main-Space---September-35.jpg" height="600px" width="auto">
+                    <img src="css/images/exhibitions/Main-Space---September-36.jpg" height="600px" width="auto">
+                    <img src="css/images/exhibitions/Main-Space---September-37.jpg" height="600px" width="auto">
+                    <img src="css/images/exhibitions/lotus_installation2.jpg" height="600px" width="auto">
+                </div>
+            </div>
+            <div id="profile" class="page grid two-column-text-image">
+                <div class="profile-description" style="display:none">                
+                    <h3>Artist Profile</h3>
+                    <p>Nunc vestibulum suscipit magna, vitae porttitor turpis congue nec. Sed metus libero, blandit ac nulla vel, euismod dapibus risus. Nulla aliquam ut mauris eu vulputate. Vestibulum at posuere elit. Donec a facilisis turpis, sit amet vulputate leo. Aliquam erat volutpat. Phasellus interdum, neque quis consequat blandit, velit sem rhoncus lectus, quis maximus risus augue ac sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur ac tortor aliquet dui vestibulum suscipit ut quis diam. Pellentesque rhoncus tempus convallis.</p>
+                    <p>Cras vulputate eros non hendrerit fermentum. Donec viverra nunc vitae turpis tempus, ut dapibus leo luctus. Quisque nec quam tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vitae diam erat. Donec venenatis aliquet felis, sit amet posuere tellus venenatis quis. Phasellus pellentesque ac massa id hendrerit.</p>
+                </div>
+                <div class="text-column profile-timeline">
+                    <h3>Education</h3>
+                    <h4>2018</h4>
+                    <p><i>Master of Fine Arts,</i> York University</p>
+                    <h4>2013</h4>
+                    <p><i>Honours Bachelor of Fine Arts,</i> Art History and Studio Art, Concordia University</p>
+                    <h3>Awards</h3>
+                    <h4>2018</h4>
+                    <p><i>Purchase Prize,</i> Schulich School of Business, York University</p>
+                    <p><i>Visiting Artist in Sculpture,</i> York University</p>
+                    <p><i>Fieldwork Cost Fund,</i> York University</p>
+                    <p><i>Professional Development Fund,</i> CUPE 3903, York University</p>
+                    <h4>2017</h4>
+                    <p><i>Joseph Armand Bombardier Canada Graduate Scholarship,</i> SSHRC</p>
+                    <p><i>Graduate Development Fund,</i> York University</p>
+                    <h4>2017</h4>
+                    <p><i>Graduate Development Fund,</i> York University</p>
+                    <h4>2016</h4>
+                    <p><i>York Graduate Scholarship for Media and Visual Art,</i> York University</p>
+                    <h4>2013</h4>
+                    <p>Concordia University Department of Ceramics Residency</p>
+                    <p>Concordia University Alumni Association Grant</p>
+                    <h4>2012</h4>
+                    <p>Fine Arts Student Alliance Special Project Individual Grant</p>
+                    <p>Carolyn and Richard Renaud Educational Bursary</p>
+                    <h4>2011</h4>
+                    <p><i>Summer Company Award,</i> Government of Ontario</p>
+                    <h4>2010</h4>
+                    <p><i>Ceramics Award,</i> Concordia University Department of Ceramics</p>
+                    <h4>2009</h4>
+                    <p>Canada Millennium Scholarship Foundation Excellence Award</p>
+                    <h3>Professional Experience</h3>
+                    <h4>2018</h4>
+                    <p>Course Instructor, <i>Painting: Constructing the Human Figure,</i> Department of Visual Art, York University</p>
+                    <p>Retail Associate, Art Metropole, Toronto</p>
+                    <h4>2017</h4>
+                    <p>Course Instructor, <i>Creating Space in Contemporary Painting,</i> Department of Visual Art, York University</p>
+                    <p>Co-President, Visual Arts Graduate Student Association, York University</p>
+                    <h4>2015</h4>
+                    <p>Costumer, Susan Dicks & Co., Toronto</p>
+                    <h4>2014</h4>
+                    <p>Set Designer, Studio Artefact, Montreal</p>
+                    <h4>2013</h4>
+                    <p>Art Instructor, Cote St. Luc Community Centre, Montreal</p>
+                    <p>Art Instructor, Visual Art Centre, Montreal</p>
+                    <p>Printmaker, C60 Screenprinting, Montreal</p>
+                    <p>Administrative Coordinator, Art Matters Festival, Montreal</p>
+                    <h4>2011</h4>
+                    <p>Mural Facilitator, Graffiti Transformation Project, Harbourfront Community Centre, Toronto</p>
+                    <h4>2008</h4>
+                    <p>Studio Monitor, Department of Print Media, Concordia University, Montreal</p>
+                </div>
+                <div class="image-column profile-image">
+                    <img src="css/images/profile.jpg" height="600px" width="auto">
+                </div>
+            </div>
+            <div id="contact" class="overlay-page"></div>
+            <div class="close-project-mobile"></div>
             <div id="project-1" class="project-page project-1 page grid">
                 <div class="section">
                     <div class="slide project-item">
@@ -103,6 +252,7 @@
                         <img class="item-image" alt="Installation view (Garden and Horse Swimming)" src="css/images/projects/01/04_installation-view-(garden-and-horse-swiming).jpg">
                         <span class="item-description"><i>Installation view (Garden and Horse Swimming),</i> Acrylic on polyester mesh, variable dimensions, 2018</span>
                         <span class="project-item-counter">4/4</span>
+                        <span class="exit-project-arrow"></span>
                     </div>
                 </div>
             </div>            
@@ -117,6 +267,7 @@
                         <img class="item-image" alt="Eighteen Budgies Feasting on Millet" src="css/images/projects/02/06_Eighteen-Budgies-Feasting-on-Millet.jpg">
                         <span class="item-description"><i>Eighteen Budgies Feasting on Millet,</i> Oil on wood, 24" x 24", 2014</span>
                         <span class="project-item-counter">2/2</span>
+                        <span class="exit-project-arrow"></span>
                     </div>
                 </div>
             </div>         
@@ -136,6 +287,7 @@
                         <img class="item-image" alt="Mother's Day" src="css/images/projects/03/09_Mothers-Day.jpg">
                         <span class="item-description"><i>Mother's Day,</i> Oil on wood, 28" X 30", 2015</span>
                         <span class="project-item-counter">3/3</span>
+                        <span class="exit-project-arrow"></span>
                     </div>
                 </div>
             </div>         
@@ -155,6 +307,7 @@
                         <img class="item-image" alt="Leaves at Night" src="css/images/projects/04/12_leaves-at-night.jpg">
                         <span class="item-description"><i>Leaves at Night,</i> Oil on canvas, 29" x 40", 2013-2014</span>
                         <span class="project-item-counter">3/3</span>
+                        <span class="exit-project-arrow"></span>
                     </div>
                 </div>
             </div>         
@@ -174,6 +327,7 @@
                         <img class="item-image" alt="Birds (Shanghai)" src="css/images/projects/05/15_Birds-(Shanghai).jpg">
                         <span class="item-description"><i>Birds (Shanghai),</i> Oil on wood, 56" x 48", 2014</span>
                         <span class="project-item-counter">3/3</span>
+                        <span class="exit-project-arrow"></span>
                     </div>
                 </div>
             </div>         
@@ -193,6 +347,7 @@
                         <img class="item-image" alt="Snake Dreaming" src="css/images/projects/06/18_snake-dreaming.jpg">
                         <span class="item-description"><i>Snake Dreaming,</i> Oil on wood, 24" x 30", 2014</span>
                         <span class="project-item-counter">3/3</span>
+                        <span class="exit-project-arrow"></span>
                     </div>
                 </div>
             </div>         
@@ -212,6 +367,7 @@
                         <img class="item-image" alt="Food For Ghosts" src="css/images/projects/07/21_Food-For-Ghosts.jpg">
                         <span class="item-description"><i>Food For Ghosts,</i> Porcelain, 2" x 5" x 2.5", 2013</span>
                         <span class="project-item-counter">3/3</span>
+                        <span class="exit-project-arrow"></span>
                     </div>
                 </div>
             </div>
