@@ -770,12 +770,15 @@ div#mobile-menu .mobile-menu-title {
     background: url('images/close-01.svg');
     width: 15px;
     height: 15px;
-    background-size: contain;
+    background-size: 50%;
+    background-position: center;
     background-repeat: no-repeat;
-    right: 20px;
+    right: 10px;
     position: fixed;
-    top: 20px;
+    top: 10px;
     z-index: 10000;
+    padding: 10px;
+    cursor: pointer;
 }
     .item-image {
         grid-row: 2 / span 2;
