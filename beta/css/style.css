@@ -324,7 +324,7 @@ img.project-image.small+.project-overlay-title {
 }
 
 .item-description {
-    grid-row: 3;
+    grid-row: 4;
     justify-self: center;
     font-size: 18px;
     line-height: 25.3px;
@@ -778,14 +778,23 @@ div#mobile-menu .mobile-menu-title {
     z-index: 10000;
 }
     .item-image {
-        grid-row: 1 / span 2;
+        grid-row: 2 / span 2;
     }
 
 .slide.project-item>div {
-    grid-template-rows: 100px auto 80px;
+    grid-template-rows: 20px 100px auto 80px;
 }
 .fp-controlArrow, .exit-project-arrow {
     display: none !important;
+}
+.fp-slide.fp-table {
+    display: block !important;
+}
+.fp-tableCell {
+    height: 100% !important;
+}
+.section.fp-section.active {
+    height: auto !important;
 }
 }
 @media (max-width: 350px) {
