@@ -14,7 +14,7 @@ body {
     text-decoration: none;
 }
 .header-text * {
-    color: #4f4f4f;
+    color: #000000;
     text-decoration: none;
 }
 .flex {
@@ -42,7 +42,7 @@ h3 {
     letter-spacing: 2px;
 }
 h4 {
-    color: #4f4f4f;
+    color: #000000;
 }
 #header {
     min-width: 412px;
@@ -56,7 +56,7 @@ h4 {
 
 .header-text {
     font-size: 48px;
-    color: #4f4f4f;
+    color: #000000;
     letter-spacing: 5.1px;    
 }
 
@@ -301,7 +301,7 @@ img.project-image.small+.project-overlay-title {
     position: relative;
 }
 .slide.project-item>div>* {
-    color: #4f4f4f;
+    color: #000000;
 }
 
 .item-title {
@@ -554,7 +554,7 @@ div#contact-page.active {
     grid-column: 2;
 }
 .profile-timeline {
-    grid-row: 1;
+    grid-row: 2;
     grid-column: 2;
     margin-top: 0px;
 }
@@ -597,7 +597,7 @@ div#contact-page.active {
 p {
     margin: 0;
     line-height: 1.8em;
-    color: #4f4f4f;
+    color: #000000;
 }
 
 i {
@@ -756,7 +756,7 @@ div#mobile-menu .mobile-menu-title {
 
 @media (max-width: 800px) {
     #mobile-menu>*, .home-page .header-text * {
-     color:  #4f4f4f !important;
+     color:  #000000 !important;
     }
 
      .home-page #mobile-menu:not(.open-menu) .mobile-menu-title {

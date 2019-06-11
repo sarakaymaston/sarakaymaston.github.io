@@ -93,8 +93,10 @@ function setActivePage(page) {
         $("#mobile-menu a").removeClass();
         $(`#navigation a[href='#${pageId}']`).addClass('active');
         $(`#mobile-menu a[href='#${pageId}']`).addClass('active');
-        fullpage_api.destroy('all'); 
-        $(".project-page").removeClass("fullpage-wrapper fp-destroyed");
+		if ($( 'html' ).hasClass( 'fp-enabled' )) {
+			fullpage_api.destroy('all'); 
+			$(".project-page").removeClass("fullpage-wrapper fp-destroyed");
+		}
     }
     
     
