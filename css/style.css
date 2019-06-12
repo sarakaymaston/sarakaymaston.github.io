@@ -282,11 +282,15 @@ img.project-image.small+.project-overlay-title {
     grid-template-columns:;
 }
 .project-item-counter {
-    position: absolute;
     bottom: 50px;
     right: 50px;
     font-size: 18px;
     letter-spacing: 2.6px;
+    grid-row: 3;
+    grid-column: 1;
+    justify-self: end;
+    margin-right: 20px;
+    align-self: center;
 }
 .project-close-button {
     position: absolute;
@@ -300,7 +304,7 @@ img.project-image.small+.project-overlay-title {
 .slide.project-item>div {
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 100px auto 100px 30px;
+    grid-template-rows: minmax(116px, 5%) auto 5%;
     position: relative;
 }
 .slide.project-item>div>* {
@@ -319,7 +323,7 @@ img.project-image.small+.project-overlay-title {
 
 .item-image {
     grid-row: 2;
-    max-height: calc(100% - 40px);
+    max-height: calc(100% - 0px);
     max-width: calc(100% - 40px);
     width: auto;
     align-self: center;
@@ -332,6 +336,8 @@ img.project-image.small+.project-overlay-title {
     font-size: 18px;
     line-height: 25.3px;
     letter-spacing: 1.4px;
+    grid-column: 1;
+    align-self: center;
 }
 
 .section-wrapper {
@@ -748,6 +754,7 @@ img.project-image {
 
 span.mobile-menu-contact-header {
     font-weight: bold;
+	padding-top: 15px;
 }
 div#mobile-menu .mobile-menu-title {
     margin: 15px 0 !important;
