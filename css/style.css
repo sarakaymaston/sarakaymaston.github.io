@@ -117,6 +117,9 @@ h4 {
 #navigation a:nth-child(6) {
     order: 6;
 }
+#navigation a:nth-child(7) {
+    order: 7;
+}
 div#navigation:not(.nohover):hover a {
     display: block;
 }
