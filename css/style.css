@@ -283,14 +283,17 @@ img.project-image.small+.project-overlay-title {
     justify-self: end;
     margin-right: 20px;
     align-self: center;
+    position: relative !important;
+    bottom: 0px !important;
+    right: 50px !important;
 }
 
 .slide.project-item>div {
-    grid-template-rows: minmax(116px, 5%) auto 5%;
+    grid-template-rows: minmax(116px, 5%) auto 5% !important;
 }
 
 .item-image {
-    max-height: calc(100% - 0px);
+    max-height: calc(100% - 0px) !important;
 }
 
 .item-description {
