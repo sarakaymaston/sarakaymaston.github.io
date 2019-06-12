@@ -275,18 +275,37 @@ img.project-image.small+.project-overlay-title {
 
 /********* PROJECTS *********/
 
-.project-page {
-    //
-    grid-template-columns: repeat(2, 50%);
-    /* grid-template-columns: 10px auto 10px; */
-    grid-template-columns:;
-}
+@media (min-width: 800px) {
+	
 .project-item-counter {
-    position: absolute;
+    grid-row: 3;
+    grid-column: 1;
+    justify-self: end;
+    margin-right: 20px;
+    align-self: center;
+}
+
+.slide.project-item>div {
+    grid-template-rows: minmax(116px, 5%) auto 5%;
+}
+
+.item-image {
+    max-height: calc(100% - 0px);
+}
+
+.item-description {
+    grid-column: 1;
+	align-self: center;
+}
+
+}
+
+.project-item-counter {
     bottom: 50px;
     right: 50px;
     font-size: 18px;
     letter-spacing: 2.6px;
+	position: absolute;
 }
 .project-close-button {
     position: absolute;
@@ -748,6 +767,7 @@ img.project-image {
 
 span.mobile-menu-contact-header {
     font-weight: bold;
+	padding-top: 15px;
 }
 div#mobile-menu .mobile-menu-title {
     margin: 15px 0 !important;
