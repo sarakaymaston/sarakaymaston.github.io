@@ -275,6 +275,31 @@ img.project-image.small+.project-overlay-title {
 
 /********* PROJECTS *********/
 
+@media (min-width: 800px) {
+	
+.project-item-counter {
+    grid-row: 3;
+    grid-column: 1;
+    justify-self: end;
+    margin-right: 20px;
+    align-self: center;
+}
+
+.slide.project-item>div {
+    grid-template-rows: minmax(116px, 5%) auto 5%;
+}
+
+.item-image {
+    max-height: calc(100% - 0px);
+}
+
+.item-description {
+    grid-column: 1;
+	align-self: center;
+}
+
+}
+
 .project-page {
     //
     grid-template-columns: repeat(2, 50%);
@@ -286,11 +311,7 @@ img.project-image.small+.project-overlay-title {
     right: 50px;
     font-size: 18px;
     letter-spacing: 2.6px;
-    grid-row: 3;
-    grid-column: 1;
-    justify-self: end;
-    margin-right: 20px;
-    align-self: center;
+	position: absolute;
 }
 .project-close-button {
     position: absolute;
@@ -304,7 +325,7 @@ img.project-image.small+.project-overlay-title {
 .slide.project-item>div {
     margin: 0 auto;
     display: grid;
-    grid-template-rows: minmax(116px, 5%) auto 5%;
+    grid-template-rows: 100px auto 100px 30px;
     position: relative;
 }
 .slide.project-item>div>* {
@@ -323,7 +344,7 @@ img.project-image.small+.project-overlay-title {
 
 .item-image {
     grid-row: 2;
-    max-height: calc(100% - 0px);
+    max-height: calc(100% - 40px);
     max-width: calc(100% - 40px);
     width: auto;
     align-self: center;
@@ -336,8 +357,6 @@ img.project-image.small+.project-overlay-title {
     font-size: 18px;
     line-height: 25.3px;
     letter-spacing: 1.4px;
-    grid-column: 1;
-    align-self: center;
 }
 
 .section-wrapper {
