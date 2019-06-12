@@ -3,9 +3,9 @@ $(document).ready(function () {
    // alert("test");
     
     //var randomSelector = Math.floor((Math.random() * 3) + 1);
-    //$("#home-page").css('background-image', `url("css/images/home-${randomSelector}.jpg")`);
+    //$("#home-page").css('background-image', "url("css/images/home-${randomSelector}.jpg")");
     //var randomSelector = Math.floor((Math.random() * 3) + 1);
-    //document.getElementById("home-page").style.backgroundImage = `url("css/images/home-${randomSelector}.jpg")`;    
+    //document.getElementById("home-page").style.backgroundImage = "url("css/images/home-${randomSelector}.jpg")";    
     
     if ($("#home")[0].classList.toString().indexOf("background") < 0) {        
                 var randomSelector = Math.floor((Math.random() * 3) + 1);
@@ -16,27 +16,35 @@ $(document).ready(function () {
         if ($(".container").hasClass('contact-page')) {
             $(".contact-title").removeClass('active')
             $("#contact").removeClass('active');
-            window.location.hash = $(".page.active").attr('id').split('-')[0]
-            fullpage_api.setAllowScrolling(true);
+            window.location.hash = $(".page.active").attr('id').split('-')[0];
+			if ($( 'html' ).hasClass( 'fp-enabled' )) {
+				fullpage_api.setAllowScrolling(true);
+			}
         }
         else {
             $(".contact-title").addClass('active')
             $("#contact").addClass('active');
             window.location.hash = "contact";
-            fullpage_api.setAllowScrolling(false);
+			if ($( 'html' ).hasClass( 'fp-enabled' )) {
+				fullpage_api.setAllowScrolling(false);
+			}
         }
     });
     
     $(".project-page").on('click', ".exit-project-arrow", function () {
         window.location.hash = "work";
-        fullpage_api.destroy('all'); 
-        $(".project-page").removeClass("fullpage-wrapper fp-destroyed");
+        if ($( 'html' ).hasClass( 'fp-enabled' )) {
+			fullpage_api.destroy('all'); 
+			$(".project-page").removeClass("fullpage-wrapper fp-destroyed");
+		}
     });
     
     $(".close-project-mobile").on('click', function () {
         window.location.hash = "work";
-        fullpage_api.destroy('all'); 
-        $(".project-page").removeClass("fullpage-wrapper fp-destroyed");
+        if ($( 'html' ).hasClass( 'fp-enabled' )) {
+			fullpage_api.destroy('all'); 
+			$(".project-page").removeClass("fullpage-wrapper fp-destroyed");
+		}
     });
     
     $(".item-image").on('click', function () {
@@ -44,8 +52,6 @@ $(document).ready(function () {
             fullpage_api.moveSlideRight();
         }
     });
-    
-    $("#mobile-menu").on("click", )
     
     $("#navigation").on("mouseover", function() {
         $("#navigation").removeClass('nohover');
