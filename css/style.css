@@ -293,7 +293,7 @@ img.project-image.small+.project-overlay-title {
 }
 
 .item-image {
-    max-height: calc(100% - 0px) !important;
+    height: calc(100% - 40px) !important;
 }
 
 .item-description {
@@ -814,6 +814,7 @@ div#mobile-menu .mobile-menu-title {
     grid-template-rows: 20px 100px auto 80px;
 }
 .fp-controlArrow, .exit-project-arrow {
+
     display: none !important;
 }
 .fp-slide.fp-table {
