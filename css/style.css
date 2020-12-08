@@ -181,7 +181,7 @@ div#home {
     justify-items: flex-end;
 }
 #work .project-5 {
-    grid-row: 7 / span 2;
+    grid-row: 7 / span 3;
     grid-column: 1 / span 4;
     text-align: end;
 }
@@ -192,6 +192,10 @@ div#home {
 #work .project-7 {
     grid-row: 6;
     grid-column: 5 / span 4;
+}
+#work .project-8 {
+    grid-row: 8;
+    grid-column: 5 / span 3;
 }
 img.project-image {
     width: 100%;
